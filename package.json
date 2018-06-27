@@ -2,7 +2,7 @@
   "name": "multistep-form",
   "version": "0.1.0",
   "private": true,
-  "home": "https://roygil.github.io/react-multistep-form/",
+  "homepage": "https://roygil.github.io/react-multistep-form/",
   "dependencies": {
     "bootstrap": "^4.1.1",
     "react": "^16.4.1",
