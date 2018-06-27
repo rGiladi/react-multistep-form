@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.multistep-form {
+  display: flex;
+  flex-flow: row;
+}
+
+.multistep-form > div {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 4px;
+  transition: color .3s linear;
+}
+
+.multistep-form > div:not(.active) {
+  max-height: 300px;
+  color: rgba(0, 0, 0, .3);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 4px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.multistep-form > div:not(.active) input {
+  color: rgba(0, 0, 0, .3);
+}
+
+.multistep-form > div:not(.active)::after {
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  top:0; left:0;
+  background: rgba(0 ,0, 0, .05);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.multistep-form > div:not(.active) .btn {
+  display: none;
+}
+
+.btn {
+  width: calc(100% - 48px);
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: #545294 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.btn:active {
+  bottom: 23px;
+  background: #4a4983 !important;
+}
+
+.btn:focus {
+  border: 1px solid rgba(0, 0, 0, .5) !important;
+}
+
+.btn:hover {
+  background: #4a4983;
+}
+
+#about {
+  height: 215px;
+}
+
+.final-step {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .75);
+  text-align: center;
+}
+
+/* Form Processing Spinner */
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* Github Corner */
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+
+.github-corner svg {
+  fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;
+}
+
+.github-corner .octo-arm {
+  transform-origin: 130px 106px;
+}
